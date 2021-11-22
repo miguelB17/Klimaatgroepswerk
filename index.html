@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="layout.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
             <!-- Font Awesome -->
@@ -25,295 +25,228 @@
         <title>Inhaler</title>
     </head>
     <body>
-        <div class="header" class="row">
-            <div class="logo col-6">
-                <img class="logo" src='img/logo.png'>
-            </div>
-            <div class="navigation col-6">
-                <a class="navitem" href="#AQI">My AQI</a>
-                <a class="navitem" href="#">What is AQI</a>
-                <a class="navitem" href="#Creators">Our project</a>
+        <div class="header row">
+            <div class="container-fluid col-12" >
+                <nav class="navbar navbar-expand-md">
+                    <div class="logo">
+                        <img class="logo" src='img/logo.png'>
+                    </div>
+                    <button class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="mobileMenu" aria-controls="mobileMenu" aria-expanded="false" >
+                        <span class="navbar-toggle-icon"></span> 
+                    </button>
+                    <div class="collapse navbar-collapse" id="mobileMenu">
+                        <ul class="navbar-nav text-center ms-auto">
+                            <li>
+                                <a class="navitem" href="#calculate">My AQI</a>
+                            </li>
+                            <li>
+                                <a class="navitem" href="#AQI">What is AQI</a>
+                            </li>
+                            <li>
+                                <a class="navitem" href="#info">Our project</a>
+                            </li>
+                        </ul>
+                    </div> 
+                </nav>
             </div>
         </div>
         <br>
 
-        <div class="content">
-            <div class="container" id="AQI">
-                <div class="row">
-                    <div class="col-12"> <!--=| input fields |-->
-                        <h1>Want to know your AQI?</h1>
-                        <form class="d-flex input-group w-auto">
-                            <div class="input-group">
-                              <div class="form-outline">
+        <div class="content row">
+            <h1>Want to know your AQI?</h1>
+            <div class="container-fluid col-3" id="calculate"><!--=| Calculate your API based on your Street and City |-->
+                    <form class="d-flex input-group w-auto">
+                        <div class="input-group">
+                            <div class="form-outline"> <!--=| input fields |-->
                                 <input type="search" id="streetInput" class="form-control" />
                                 <label class="form-label" for="form1">Street</label>
-                              </div>
-                              <div class="form-outline ms-3">
+                            </div>
+                            <div class="form-outline ms-3">
                                 <input type="search" id="cityInput" class="form-control" />
                                 <label class="form-label" for="form1">City</label>
-                              </div>
-                              <button type="button" class="btn btn-primary" id="searchButton">
+                            </div>
+                            <button type="button" class="btn btn-primary" id="searchButton">
                                 <i class="fas fa-search"></i>
-                              </button>
-                            </div>
-                          </form>
-                        <div id="apiTest"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <!--=| Map |-->
-                    </div>
-                </div>
+                            </button>
+                        </div>
+                    </form>
+                    <div id="apiTest"></div>
             </div>
-            <br>
-            
-                
+            <div class="container-fluid col-9"> <!--=| Map |-->
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-12"><!--=| accordion with safety zones |-->
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"aria-expanded="false" aria-controls="collapseOne">
-                                        <i class="far fa-grin"></i >Good air quality
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Health Implications: The air quality is considered satisfactory, and air pollution poses little or no risk!</p>
-                                        <p>Cautionary Statement: None</p>
-                                    </div>
+            </div>
+        </div>
+            <br>
+
+            <div class="row ">
+                <div class="container-fluid col-12"><!--=| accordion with safety zones |-->
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <i class="far fa-grin"></i > Good air quality
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <p>Health Implications: The air quality is considered satisfactory, and air pollution poses little or no risk!</p>
+                                <p>Cautionary Statement: None</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="far fa-smile"></i> Moderate air quality
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Health Implications: Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</p>
+                                    <p>Cautionary Statement: Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</p>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <i class="far fa-smile"></i> Moderate air quality
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Health Implications: Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</p>
-                                        <p>Cautionary Statement: Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</p>
-                                    </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="far fa-meh"></i> Unhealthy air quality for sensitive groups
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Health Implications: Members of sensitive groups may experience health effects. The general public is not likely to be affected.</p>
+                                    <p>Cautionary Statement: Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</p>
+                                    <p>You are able to get more medical advise <a href="http://www.fresnostatenews.com/2020/09/18/8-tips-to-protect-yourself-from-unhealthy-air-quality/" target="_blank"><b>here</b></a></p>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <i class="far fa-meh"></i> Unhealthy air quality for sensitive groups
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Health Implications: Members of sensitive groups may experience health effects. The general public is not likely to be affected.</p>
-                                        <p>Cautionary Statement: Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</p>
-                                        <p>You are able to get more medical advise <a href="http://www.fresnostatenews.com/2020/09/18/8-tips-to-protect-yourself-from-unhealthy-air-quality/" target="_blank"><b>here</b></a></p>
-                                    </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="far fa-frown"></i> Unhealthy air quality for everyone
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>	Health Implications: Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects</p>
+                                    <p>Cautionary Statement: Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion</p>
+                                    <p>You are able to get more medical advise <a href="http://www.fresnostatenews.com/2020/09/18/8-tips-to-protect-yourself-from-unhealthy-air-quality/" target="_blank"><b>here</b></a></p>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        <i class="far fa-frown"></i> Unhealthy air quality for everyone
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>	Health Implications: Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects</p>
-                                        <p>Cautionary Statement: Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion</p>
-                                    </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <i class="far fa-tired"></i> Very unhealthy quality
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Health Implications:Health warnings of emergency conditions. The entire population is more likely to be affected.</p>
+                                    <p>Cautionary Statement:Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</p>
+                                    <p>You are able to get more medical advise <a href="http://www.fresnostatenews.com/2020/09/18/8-tips-to-protect-yourself-from-unhealthy-air-quality/" target="_blank"><b>here</b></a></p>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                        <i class="far fa-tired"></i> Very unhealthy quality
-                                    </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Health Implications:Health warnings of emergency conditions. The entire population is more likely to be affected.</p>
-                                        <p>Cautionary Statement:Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingSix">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                        <i class="far fa-dizzy"></i> Hazardous air quality
-                                    </button>
-                                </h2>
-                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p> Health Implecations: Air quality in this range triggers health warnings of emergency conditions by media outlets. The entire population is more likely to be affected by serious health effects.</p>
-                                        <p>Cautionary Statement: Everyone should avoid all outdoor exertion</p>
-                                    </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <i class="far fa-dizzy"></i> Hazardous air quality
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p> Health Implecations: Air quality in this range triggers health warnings of emergency conditions by media outlets. The entire population is more likely to be affected by serious health effects.</p>
+                                    <p>Cautionary Statement: Everyone should avoid all outdoor exertion</p>
+                                    <p>You are able to get more medical advise <a href="http://www.fresnostatenews.com/2020/09/18/8-tips-to-protect-yourself-from-unhealthy-air-quality/" target="_blank"><b>here</b></a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <br>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-6"> <!--=| graph |-->
-                    </div>
+            <div class="row">
+                <div class="container-fluid col-6"> <!--=| graph |-->
+                </div>
 
-                    <div class="col-6"> <!--=| table |-->
-                        <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">AQI</th>
-                                <th scope="col">Air Pollution Level</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr style="background: #00E400">
-                                <th scope="row">0-50</th>
-                                <td><i class="far fa-grin"></i > Good</td>
-                              </tr>
-                              <tr style="background: #FFFF00">
-                                <th scope="row">51-100</th>
-                                    <td><i class="far fa-smile"></i> Moderate</td>
-                              </tr>
-                              <tr style="background: #FF7E00">
-                                <th scope="row">101-150</th>
-                                    <td><i class="far fa-meh"></i> Unhealthy for Sensitive Groups</td>
-                              </tr>
-                              <tr style="background: #FF0000">
-                                <th scope="row">151-200</th>
-                                    <td><i class="far fa-frown"></i> Unhealthy</td>
-                              </tr>
-                              <tr style="background: #99004C">
-                                <th scope="row">201-250</th>
-                                    <td><i class="far fa-tired"></i> Very Unhealthy</td>
-                              </tr>
-                              <tr style="background: #7E0023">
-                                <th scope="row">300+</th>
-                                    <td><i class="far fa-dizzy"></i> Hazardous</td>
-                              </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="container-fluid col-6"> <!--=| table |-->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">AQI</th>
+                            <th scope="col">Air Pollution Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: #00E400;">
+                            <th scope="row">0-50</th>
+                            <td><i class="far fa-grin"></i > Good</td>
+                            </tr>
+                            <tr style="background: #FFFF00">
+                            <th scope="row">51-100</th>
+                                <td><i class="far fa-smile"></i> Moderate</td>
+                            </tr>
+                            <tr style="background: #FF7E00">
+                            <th scope="row">101-150</th>
+                                <td><i class="far fa-meh"></i> Unhealthy for Sensitive Groups</td>
+                            </tr>
+                            <tr style="background: #FF0000">
+                            <th scope="row">151-200</th>
+                                <td><i class="far fa-frown"></i> Unhealthy</td>
+                            </tr>
+                            <tr style="background: #99004C; color: #FCFCFC;">
+                            <th scope="row">201-250</th>
+                                <td><i class="far fa-tired"></i> Very Unhealthy</td>
+                            </tr>
+                            <tr style="background: #7E0023 ; color: #FCFCFC;">
+                            <th scope="row">300+</th>
+                                <td><i class="far fa-dizzy"></i> Hazardous</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="container-fluid col-12" id="AQI"> <!--=| more information about AQI |-->
+
                 </div>
             </div>
             <br>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <!--=| more information about AQI |-->
-                    </div>
-                </div>
-            </div>
-            <br>
-
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <!--=| Learning about the developers |-->
-                        <div id="Creators">
-                            <h1>About the project</h1>
-                                <h2>Our project </h2>
-                                    <p>We are new Full Stack Developpers. For our group project we decide to.... API </p>
+                        <!--=| information about this site and it's creators |-->
+                        <div id="info">
+                            <h1>Info</h1>
+                                <h2>About the project</h2>
+                                    <p>We are three new Full Stack Developpers. For our group project we decide to use the <a href="https://openweathermap.org/api/air-pollution">Open Weather API</a> to create this site. We relized how important our health is after these hard years. So we made this.</p>
 
-                                <h2>LinkedIn <i class="fab fa-linkedin"></i></h2>
+                                <h2>Meet the developers <i class="fab fa-linkedin"></i></h2>
                                     <p>
-                                        <a href="https://www.linkedin.com/in/miguel-broeders-03500b222/"> Miguel Broeders</a>
-                                        <a href="https://www.linkedin.com/in/lennert-vaes-8aab6b225/">Lennert Vaes</a>
-                                        <a href="https://www.linkedin.com/in/lotte-jeuris-9280a8223/"> Lotte Jeuris</a>
+                                        <a href="https://www.linkedin.com/in/miguel-broeders-03500b222/"> Miguel Broeders </a>
+                                        <a href="https://www.linkedin.com/in/lennert-vaes-8aab6b225/"> Lennert Vaes </a>
+                                        <a href="https://www.linkedin.com/in/lotte-jeuris-9280a8223/"> Lotte Jeuris </a>
                                     </p>
                                     
-                                
-                                    
-                                <h2></h2>
-                                    
+                                <h2>Rescources</h2>
+                                    <i class="fab fa-html5"></i>
+                                    <i class="fab fa-css3-alt"></i>
+                                    <i class="fab fa-js"></i>
+                                    <i class="fab fa-bootstrap"></i>
                         </div>
                     </div>
                 </div>
-            </div>
-
-
-
-
-                
+            </div> 
 
         </div>
-
-        <footer class="bg-light text-center text-white">
-            <!-- Grid container -->
-            <div class="container p-4 pb-0">
-              <!-- Section: Social media -->
-              <section class="mb-4">
-                <!-- Facebook -->
-                <a
-                  class="btn btn-primary btn-floating m-1"
-                  style="background-color: #3b5998;"
-                  href="#!"
-                  role="button"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-          
-                <!-- Twitter -->
-                <a
-                  class="btn btn-primary btn-floating m-1"
-                  style="background-color: #55acee;"
-                  href="#!"
-                  role="button"
-                  ><i class="fab fa-twitter"></i
-                ></a>
-          
-                <!-- Google -->
-                <a
-                  class="btn btn-primary btn-floating m-1"
-                  style="background-color: #dd4b39;"
-                  href="#!"
-                  role="button"
-                  ><i class="fab fa-google"></i
-                ></a>
-          
-                <!-- Instagram -->
-                <a
-                  class="btn btn-primary btn-floating m-1"
-                  style="background-color: #ac2bac;"
-                  href="#!"
-                  role="button"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-          
-                <!-- Linkedin -->
-                <a
-                  class="btn btn-primary btn-floating m-1"
-                  style="background-color: #0082ca;"
-                  href="#!"
-                  role="button"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <!-- Github -->
-                <a
-                  class="btn btn-primary btn-floating m-1"
-                  style="background-color: #333333;"
-                  href="#!"
-                  role="button"
-                  ><i class="fab fa-github"></i
-                ></a>
-              </section>
-              <!-- Section: Social media -->
-            </div>
-            <!-- Grid container -->
-          
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-              © 2021 Copyright:
-              <a class="text-white" href="https://mdbootstrap.com/">Inhaler</a>
-            </div>
-            <!-- Copyright -->
-          </footer>
 
         <script src="js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
