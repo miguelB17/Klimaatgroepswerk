@@ -38,30 +38,37 @@ function fetchQuality() {
           let aqiValue = data.list[0].main.aqi
           console.log(aqiValue)
           if (aqiValue == 1){ 
+            let accordionReturn = document.getElementById('collapseOne').classList.add('show');
             return document.getElementById('apiTest').innerHTML = `<div class="alert alert-success" role="alert">
             <iframe width="1900" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=${userInput}+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=31ad442e590a45bb42c3051d4d4e3370e63d5b73'></script>
           </div>`;
+            
           }else if (aqiValue == 2){
+            let accordionReturn = document.getElementById('collapseTwo').classList.add('show');
             return document.getElementById('apiTest').innerHTML = `<div class="alert alert-info" role="alert">
             <iframe width="1900" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=${userInput}+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=31ad442e590a45bb42c3051d4d4e3370e63d5b73'></script>
           </div>`;
   
           }else if (aqiValue == 3){
+            let accordionReturn = document.getElementById('collapseThree').classList.add('show');
             return document.getElementById('apiTest').innerHTML = `<div class="alert alert-warning" role="alert">
             <iframe width="1900" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=${userInput}+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=31ad442e590a45bb42c3051d4d4e3370e63d5b73'></script>
           </div>`;
-  
+
           }else if (aqiValue == 4){
+            let accordionReturn = document.getElementById('collapseFour').classList.add('show');
             return document.getElementById('apiTest').innerHTML = `<div class="alert alert-dark" role="alert">
             <iframe width="1900" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=${userInput}+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=31ad442e590a45bb42c3051d4d4e3370e63d5b73'></script>
           </div>`;
   
           }else if (aqiValue == 5){
+            let accordionReturn = document.getElementById('collapseFive').classList.add('show');
             return document.getElementById('apiTest').innerHTML = `<div class="alert alert-secondary" role="alert">
             <iframe width="1900" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=${userInput}+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=31ad442e590a45bb42c3051d4d4e3370e63d5b73'></script>
           </div>`;
   
           }else if (aqiValue == 6){
+            let accordionReturn = document.getElementById('collapseSix').classList.add('show');
             return document.getElementById('apiTest').innerHTML = `<div class="alert alert-danger" role="alert">
             <iframe width="1900" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=${userInput}+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=31ad442e590a45bb42c3051d4d4e3370e63d5b73'></script>
           </div>`;
