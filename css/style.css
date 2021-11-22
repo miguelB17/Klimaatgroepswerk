@@ -1,9 +1,9 @@
 body {
 
     background: #9EBE9B; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #9EBE9B, #9EBE9B, #7FA592,#608C8A, #417482);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #9EBE9B, #9EBE9B, #7FA592,#608C8A, #417482); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color:#FCFCFC;
+    background: -webkit-linear-gradient(to bottom, #9EBE9B,#9EBE9B, #7FA592,#608C8A, #417482);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #9EBE9B,#9EBE9B, #7FA592,#608C8A, #417482); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:#FCFCFC !important;
     font-family: 'Roboto', sans-serif;
     
 }
@@ -18,49 +18,40 @@ body {
 }
 
 img.logo {
-    width: 150px;
-    margin: 0px;
-    margin-right: 80px;
+    width: 180px;
+    margin: 10px;
+    
 }
 
 .navigation {
-    float: left;
-    margin-right: 40px;
+    text-align: center;
+    
 }
 
 a.navitem {
     color: #FCFCFC;
+    background-color: #9EBE9B;
     text-decoration: none;
-    margin-right: 54px;
+    margin:50px;
     font-weight: 500;
     font-size: 23px;
 }
 
-.leftpane {
-    float:left;
-    height: 600px;
-    width: 370px;
-}
 
-.rightpane {
-    float:right;
-    height: 600px;
-    width: 370px;
-}
 
 span.fat {
     font-weight: 600;
 }
 
 h1 {
-    font-weight: 100;
-    margin-top: -12px;
+    font-weight: 80;
     color: #FCFCFC;
+    text-align: center;
 }
 
 h2 {
-    font-weight: 100;
-    margin-top: -12px;
+    font-weight: 50;
+    margin-bottom: -12px;
     color: #FCFCFC;
 }
 
@@ -68,30 +59,40 @@ button {
     display: block;
     margin-top: 20px;
     border: none;
-    padding: 10px;
-    border-radius: 4px;
-    background-color: #417482;
-    color: #FCFCFC;
+    background-color: #608C8A !important;
+    color: #FCFCFC !important;
+
 }
 
 input {
     display: block;
     width: 408px;
-    padding: 12px;
-    border-radius: 4px;
+    background-color: #FCFCFC !important; 
+    color: #417482 !important;
     border: none;
+    text-align: center;
 }
 
-.table {
-    color: #FCFCFC;
+table {
+    color: #000000 !important;
+    border: #FCFCFC !important;
+    outline: #FCFCFC !important;
 }
+
+
 
 label {
-    color: #608C8A;
+    color: #417482;
     background-color: #FCFCFC;
 }
 
+.accordion-body{
+    color: #417482;
+}
 
+a {
+    color: #FCFCFC !important;
+}
 
 /*
 #FCFCFC
