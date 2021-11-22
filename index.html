@@ -5,34 +5,225 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap Core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+    rel="stylesheet"
+    />
     <title>Document</title>
 </head>
 <body>
+  <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-        <label for="userInput">Enter a city</label>
-        <input type="text" id="userInput">  <button type="button" class="btn btn-primary" id="searchButton">Search</button>
+      <a class="navbar-brand">
+        <img
+        src="img/logo.PNG"
+        height='35'
+        alt=''
+        loading='lazy'
+        style='margin-top: -1px;'/>
+      </a>
+      <form class="d-flex input-group w-auto">
+        <div class="input-group">
+          <div class="form-outline">
+            <input type="search" id="userInput" class="form-control" />
+            <label class="form-label" for="form1">Search</label>
+          </div>
+          <button type="button" class="btn btn-primary" id="searchButton">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </nav>
         <div id="apiTest"></div>
         <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Accordion Item #1
-                </button>
-              </h2>
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Advice in case of good air quality
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>The air quality is good, you have nothing to worry about!</p>
               </div>
             </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Advice in case of moderate air quality
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Air quality is fine. Raised levels of pollutants may affect your breathing if you exercise outdoors, especially if you have asthma or allergies. Keep checking up on the air quality to make sure you stay safe.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Advice in case of bad air quality
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Pollutant concentrations affect everyone, especially those with lung or heart problems. Exercise indoors to reduce exposure to pollution. If the air quality turns hazardous, stay indoors or evacuate the area until air quality goes back to a safe level if possible</p>
+                <p>Via this <a href="http://www.fresnostatenews.com/2020/09/18/8-tips-to-protect-yourself-from-unhealthy-air-quality/" target="_blank"><b>link</b></a> you are able to get more medical advise</p>
+              </div>
+            </div>
+          </div>
         </div>
-
+    ​
+    ​
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">AQI</th>
+            <th scope="col">Air Pollution Level</th>
+            <th scope="col">Health Implications</th>
+            <th scope="col">Cautionary Statement (for PM2.5)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #00E400">
+            <th scope="row">0-50</th>
+            <td>Good</td>
+            <td>Air quality is considered satisfactory, and air pollution poses little or no risk</td>
+            <td>None</td>
+          </tr>
+          <tr style="background: #FFFF00">
+            <th scope="row">51-100</th>
+            <td>Moderate</td>
+            <td>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very
+              small number of people who are unusually sensitive to air pollution.</td>
+            <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged
+              outdoor exertion.</td>
+          </tr>
+          <tr style="background: #FF7E00">
+            <th scope="row">101-150</th>
+            <td>Unhealthy for Sensitive Groups</td>
+            <td>Members of sensitive groups may experience health effects. The general public is not likely to be affected.
+            </td>
+            <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged
+              outdoor exertion.</td>
+          </tr>
+          <tr style="background: #FF0000">
+            <th scope="row">151-200</th>
+            <td>Unhealthy</td>
+            <td>Everyone may begin to experience health effects; members of sensitive groups may experience more serious
+              health effects</td>
+            <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged
+              outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion</td>
+          </tr>
+          <tr style="background: #99004C">
+            <th scope="row">201-250</th>
+            <td>Very Unhealthy</td>
+            <td>Health warnings of emergency conditions. The entire population is more likely to be affected.</td>
+            <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor
+              exertion; everyone else, especially children, should limit outdoor exertion.</td>
+          </tr>
+          <tr style="background: #7E0023">
+            <th scope="row">300+</th>
+            <td>Hazardous</td>
+            <td>Health alert: everyone may experience more serious health effects</td>
+            <td>Everyone should avoid all outdoor exertion</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    
+<footer class="bg-light text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        class="btn btn-primary btn-floating m-1"
+        style="background-color: #3b5998;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
 
+      <!-- Twitter -->
+      <a
+        class="btn btn-primary btn-floating m-1"
+        style="background-color: #55acee;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
 
+      <!-- Google -->
+      <a
+        class="btn btn-primary btn-floating m-1"
+        style="background-color: #dd4b39;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class="btn btn-primary btn-floating m-1"
+        style="background-color: #ac2bac;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn btn-primary btn-floating m-1"
+        style="background-color: #0082ca;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <!-- Github -->
+      <a
+        class="btn btn-primary btn-floating m-1"
+        style="background-color: #333333;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">Inhaler</a>
+  </div>
+  <!-- Copyright -->
+</footer>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
 </body>
 </html>
