@@ -15,20 +15,21 @@ function fetchQuality() {
         const userInput = streetInput + " " + cityInput;
         if (streetInput.length == 0){
           for(i of data.features){
-            if(i.place_name.includes(cityInput) & i.place_type == "place"){
+            if(i.place_name.toUpperCase().includes(cityInput.toUpperCase()) & i.place_type == "place"){
               [i.center[0], i.center[1]] = [i.center[1], i.center[0]]
               lat = i.center[0];
               lon = i.center[1];
-              console.log("no length", lat, lon)
+              console.log("no length")
+              console.log(i.place_name.toUpperCase())
             }
           }
         }else {
           for (i of data.features){
-            if (i.place_name.includes(cityInput) == true & i.place_type == "address"){
+            if (i.place_name.toUpperCase().includes(cityInput.toUpperCase()) == true & i.place_type == "address"){
                 [i.center[0], i.center[1]] = [i.center[1], i.center[0]]
                 lat = i.center[0];
                 lon = i.center[1];
-                console.log("length", lat, lon)
+                console.log("length")
             }
         } 
         }
