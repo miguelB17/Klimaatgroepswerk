@@ -32,7 +32,6 @@ function fetchQuality() {
         }
         fetch(`http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${key}`)
         .then(response => response.json()).then(data => {
-          console.log(document.getElementById('collapseOne').classList)
           let aqiValue = data.list[0].main.aqi;
           let reset = document.querySelectorAll('#collapseOne, #collapseTwo, #collapseThree, #collapseFour, #collapseFive, #collapseSix');
           for (i of reset){
