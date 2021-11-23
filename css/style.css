@@ -32,6 +32,10 @@ button {
     
 }
 
+i.accordion {
+    margin-right: 50px;
+}
+
 .btn{
     height: 40% !important;
     margin-top: 37px !important;
