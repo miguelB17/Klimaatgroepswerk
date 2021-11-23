@@ -37,11 +37,6 @@ button {
     
 }
 
-.btn{
-    height: 40% !important;
-    margin-top: 37px !important;
-    margin-left: 100px!important;
-}
 .searchbutton{
     padding:10px!important;
     float: right !important;
@@ -93,8 +88,6 @@ input {
     display: block;
     background-color: #FCFCFC !important; 
     color: #417482 !important;
-    border: none;
-    margin: 50px !important;
     position: relative !important;
     left: 100px;
 }
