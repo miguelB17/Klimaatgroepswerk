@@ -8,7 +8,8 @@ body {
 }
 
 a {
-    color: #FCFCFC !important;
+    color: #FCFCFC!important;
+    font-weight: 800 !important;
 }
 
 h1 {
@@ -28,8 +29,13 @@ button {
     border: none;
     background-color: #608C8A !important;
     color: #FCFCFC !important;
-    float: right;
+    
+}
 
+.btn{
+    height: 40% !important;
+    margin-top: 37px !important;
+    margin-left: 100px!important;
 }
 
 .logo {
@@ -49,12 +55,12 @@ img.logo {
 
 .navigation {
     text-align: center;
-    
+    color: #FCFCFC;
+    position: fixed;
 }
 
 a.navitem {
     color: #FCFCFC;
-    background-color: #9EBE9B;
     text-decoration: none;
     margin:50px;
     font-weight: 500;
@@ -82,6 +88,7 @@ input {
     border: none;
     margin: 50px !important;
     position: relative !important;
+    left: 100px;
 }
 
 
@@ -113,18 +120,9 @@ label {
 
 .apiTest {
     text-align: center !important;
-
+    margin: 10px !important;
 }
 
 .searchbutton {
     height: 20px !important;
-}
-
-/*
-#FCFCFC
-#417482
-#608C8A
-#7FA592
-#9EBE9B
-    
 }
