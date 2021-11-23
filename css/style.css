@@ -24,6 +24,11 @@ h2 {
     color: #FCFCFC;
 }
 
+.input-group{
+    
+    text-align:center;
+}
+
 button {
     display: block;
     border: none;
@@ -37,7 +42,12 @@ button {
     margin-top: 37px !important;
     margin-left: 100px!important;
 }
-
+.searchbutton{
+    padding:10px!important;
+    float: right !important;
+    margin-left: 100px !important;
+    height: 20px !important;
+}
 .logo {
     float: left;
 
@@ -77,9 +87,7 @@ span.fat {
 
 
 
-.searchbutton{
-    padding:10px!important;
-}
+
 
 input {
     display: block;
@@ -123,9 +131,6 @@ label {
     margin: 10px !important;
 }
 
-.searchbutton {
-    height: 20px !important;
-}
 
 /*
 #FCFCFC
