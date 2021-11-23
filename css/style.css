@@ -5,7 +5,31 @@ body {
     background: linear-gradient(to bottom, #9EBE9B,#9EBE9B, #7FA592,#608C8A, #417482); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color:#FCFCFC !important;
     font-family: 'Roboto', sans-serif;
-    
+}
+
+a {
+    color: #FCFCFC !important;
+}
+
+h1 {
+    font-weight: 80;
+    color: #FCFCFC;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 50;
+    margin-bottom: -12px;
+    color: #FCFCFC;
+}
+
+button {
+    display: block;
+    border: none;
+    background-color: #608C8A !important;
+    color: #FCFCFC !important;
+    float: right;
+
 }
 
 .logo {
@@ -37,46 +61,37 @@ a.navitem {
     font-size: 23px;
 }
 
-
+a:hover {
+    color: #417482;
+}
 
 span.fat {
     font-weight: 600;
 }
 
-h1 {
-    font-weight: 80;
-    color: #FCFCFC;
-    text-align: center;
-}
 
-h2 {
-    font-weight: 50;
-    margin-bottom: -12px;
-    color: #FCFCFC;
-}
 
-button {
-    display: block;
-    margin-top: 20px;
-    border: none;
-    background-color: #608C8A !important;
-    color: #FCFCFC !important;
-
+.searchbutton{
+    padding:10px!important;
 }
 
 input {
     display: block;
-    width: 408px;
     background-color: #FCFCFC !important; 
     color: #417482 !important;
     border: none;
-    text-align: center;
+    margin: 50px !important;
+    position: relative !important;
 }
 
+
 table {
-    color: #000000 !important;
+    color: #FCFCFC !important;
     border: #FCFCFC !important;
     outline: #FCFCFC !important;
+    font-weight: 200 !important;
+    float: left !important;
+
 }
 
 
@@ -90,8 +105,19 @@ label {
     color: #417482;
 }
 
-a {
-    color: #FCFCFC !important;
+
+
+.adviseLink{
+    color: #417482;
+}
+
+.apiTest {
+    text-align: center !important;
+
+}
+
+.searchbutton {
+    height: 20px !important;
 }
 
 /*
@@ -101,4 +127,4 @@ a {
 #7FA592
 #9EBE9B
     
-
+}
