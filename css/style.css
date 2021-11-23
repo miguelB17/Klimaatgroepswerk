@@ -68,7 +68,7 @@ a.navitem {
 }
 
 a:hover {
-    color: #417482;
+    color: #417482 !important;
 }
 
 span.fat {
